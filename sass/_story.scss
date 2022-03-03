@@ -7,12 +7,16 @@
 				rgba($color-primary, 0.5)
 			),
 			url(../images/back.jpg);
-
+		background-size: cover;
 		display: grid;
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-columns: repeat(6, 1fr);
 
 		align-items: center;
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: 1 / -1;
+			padding: 3rem;
+		}
 	}
 
 	&__image--1 {
@@ -20,6 +24,10 @@
 		grid-row: 2 / 6;
 		grid-column: 2 / 6;
 		box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: 1 / 5;
+			grid-row: 1 / -1;
+		}
 	}
 	&__image--2 {
 		width: 115%;
@@ -27,6 +35,10 @@
 		grid-row: 4 / 6;
 		z-index: 3;
 		box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+		@media only screen and (max-width: $bp-medium) {
+			width: 100%;
+			grid-row: 1 / -1;
+		}
 	}
 
 	&__content {
@@ -43,6 +55,11 @@
 		display: grid;
 		align-content: center;
 		justify-items: start;
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-column: 1 / -1;
+			grid-row: 5 / 6;
+		}
 	}
 
 	&__text {
